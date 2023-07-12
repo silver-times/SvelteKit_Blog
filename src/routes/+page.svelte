@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from '../../.svelte-kit/types/src/routes/$types';
+	import { enhance } from '$app/forms';
 
 	export let data: PageData;
 	let articles = [];
@@ -15,10 +16,10 @@
 			{#each articles as article}
 				<div class="card w-96 h-full p-5 bg-primary text-primary-content mb-4">
 					<h2 class="card-title font-bold text-2xl py-2">{article.title}</h2>
-					<p class="flex justify-center items-center">{article.content}</p>
+					<p class="flex">{article.content}</p>
 					<div class="flex card-actions justify-end py-5">
-						<button type="submit" class="btn btn-warning">Edit</button>
-						<form action="?/deleteArticle&id={article.id}" method="POST">
+						<a href="/{article.id}"><button type="submit" class="btn btn-warning">Edit</button></a>
+						<form action="?/deleteArticle&id={article.id}" method="POST" use:enhance>
 							<button class="btn btn-error">Delete</button>
 						</form>
 					</div>
@@ -28,7 +29,7 @@
 
 		<!-- Form -->
 		<div class="w-1/2 p-4">
-			<form action="?/createArticle" method="POST" class="w-full max-w-sm mx-auto">
+			<form action="?/createArticle" method="POST" class="w-full max-w-sm mx-auto" use:enhance>
 				<div>
 					<h1 class="text-3xl mb-4 font-extralight">SUBMIT NEW ARTICLE</h1>
 					<input
