@@ -17,8 +17,10 @@
 					<h2 class="card-title font-bold text-2xl py-2">{article.title}</h2>
 					<p class="flex justify-center items-center">{article.content}</p>
 					<div class="flex card-actions justify-end py-5">
-						<button class="btn btn-warning">Edit</button>
-						<button class="btn btn-error">Delete</button>
+						<button type="submit" class="btn btn-warning">Edit</button>
+						<form action="?/deleteArticle&id={article.id}" method="POST">
+							<button class="btn btn-error">Delete</button>
+						</form>
 					</div>
 				</div>
 			{/each}
