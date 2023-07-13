@@ -1,8 +1,7 @@
 import type { PageServerLoad } from '../../../.svelte-kit/types/src/routes/$types';
-import { error, fail } from '@sveltejs/kit';
+import { error, fail, redirect } from '@sveltejs/kit';
 import { prisma } from '$lib/server/prisma';
 import type { Actions } from '@sveltejs/kit';
-import { goto } from '$app/navigation';
 
 export const load: PageServerLoad = async ({ params }) => {
 	const getArticle = async () => {
@@ -42,11 +41,6 @@ export const actions: Actions = {
 			console.error(e);
 			return fail(500, { message: 'Failed to update article' });
 		}
-		return {
-			status: 303,
-			headers: {
-				location: '/'
-			}
-		};
+		throw redirect(303, '/');
 	}
 };

@@ -16,6 +16,10 @@ export const actions: Actions = {
 			content: string;
 		};
 
+		if (!title || !content) {
+			return fail(400, { message: 'Invalid request' });
+		}
+
 		try {
 			await prisma.article.create({
 				data: {

@@ -14,9 +14,11 @@
 		<div class="flex flex-col">
 			<h1 class="text-3xl p-4 font-extralight">ARTICLES</h1>
 			{#each articles as article}
-				<div class="card w-96 h-full p-5 bg-primary text-primary-content mb-4">
+				<div class="card w-96 p-5 bg-primary text-primary-content mb-4">
 					<h2 class="card-title font-bold text-2xl py-2">{article.title}</h2>
-					<p class="flex">{article.content}</p>
+					<p class="break-words">
+						{article.content}
+					</p>
 					<div class="flex card-actions justify-end py-5">
 						<a href="/{article.id}"><button type="submit" class="btn btn-warning">Edit</button></a>
 						<form action="?/deleteArticle&id={article.id}" method="POST" use:enhance>
@@ -57,3 +59,9 @@
 		</div>
 	</div>
 </div>
+
+<!--<style>-->
+<!--	.card-content {-->
+<!--		word-break: break-word;-->
+<!--	}-->
+<!--</style>-->
