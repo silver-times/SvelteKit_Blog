@@ -14,6 +14,7 @@
 			<ul class="flex gap-5 px-1">
 				<li><a href="/profile" class="text-md uppercase hover:text-gray-200">Profile</a></li>
 				<li><a href="/register" class="text-md uppercase hover:text-gray-200">Register</a></li>
+				<li><a href="/login" class="text-md uppercase hover:text-gray-200">Login</a></li>
 				<li><a href="/logout" class="text-md uppercase hover:text-gray-200">Logout</a></li>
 			</ul>
 		</div>
