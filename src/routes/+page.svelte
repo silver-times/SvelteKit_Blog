@@ -3,7 +3,6 @@
 	import { enhance } from '$app/forms';
 
 	export let data: PageData;
-	let articles = [];
 
 	$: ({ articles } = data);
 </script>
