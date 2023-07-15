@@ -4,8 +4,11 @@
 
 <div class="flex flex-col min-h-screen">
 	<div class="navbar bg-primary text-primary-content mx-auto px-5">
-		<div class="flex-1">
-			<a href="/" class="btn btn-ghost text-xl uppercase">SvelteKit-Blog</a>
+		<div class="flex-1 gap-1">
+			<a href="/" class="material-symbols-outlined text-5xl">menu_book</a>
+			<a href="/" class="p-0">
+				<h1 class="text-3xl uppercase">SvelteKit-Blog</h1>
+			</a>
 		</div>
 		<div class="flex-none">
 			<ul class="menu menu-horizontal px-1">

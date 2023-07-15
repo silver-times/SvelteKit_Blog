@@ -10,7 +10,7 @@
 <div class="w-full p-4">
 	<form action="?/editArticle" method="POST" class="w-full max-w-sm mx-auto" use:enhance>
 		<div>
-			<h1 class="text-3xl mb-4 font-extralight">EDIT ARTICLE</h1>
+			<h2 class="text-3xl mb-4 font-extralight">EDIT ARTICLE</h2>
 			<input
 				class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
 				placeholder="Article title"

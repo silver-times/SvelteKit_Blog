@@ -10,7 +10,7 @@
 <div class="flex justify-around mx-auto">
 	<!-- Dummy Article Card -->
 	<div class="flex flex-col w-full px-5">
-		<h1 class="text-3xl p-4 font-extralight">ARTICLES</h1>
+		<h2 class="text-3xl p-4 font-extralight">ARTICLES</h2>
 		{#each articles as article}
 			<div class="card w-full p-5 bg-primary text-primary-content mb-4">
 				<h2 class="card-title font-bold text-2xl py-2">{article.title}</h2>
@@ -36,7 +36,7 @@
 	<div class="w-1/3 p-4">
 		<form action="?/createArticle" method="POST" class="w-full max-w-sm mx-auto" use:enhance>
 			<div>
-				<h1 class="text-3xl mb-4 font-extralight">SUBMIT NEW ARTICLE</h1>
+				<h2 class="text-3xl mb-4 font-extralight">SUBMIT NEW ARTICLE</h2>
 				<input
 					class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
 					placeholder="Article title"
