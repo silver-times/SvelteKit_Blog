@@ -12,8 +12,10 @@
 		</div>
 		<div class="flex-none">
 			<ul class="flex gap-5 px-1">
-				<li><a href="/profile" class="text-md hover:scale-75 uppercase">Profile</a></li>
-				<li><a href="/logout">Logout</a></li>
+				<li>
+					<a href="/profile" class="text-md uppercase hover:text-gray-200">Profile</a>
+				</li>
+				<li><a href="/logout" class="text-md uppercase hover:text-gray-200">Logout</a></li>
 			</ul>
 		</div>
 	</div>
