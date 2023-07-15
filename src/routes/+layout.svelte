@@ -2,15 +2,24 @@
 	import '../app.css';
 </script>
 
-<div class="navbar bg-base-100 mx-auto px-5">
-	<div class="flex-1">
-		<a href="/" class="btn btn-ghost normal-case text-xl">SvelteKit-Blog</a>
+<div class="flex flex-col min-h-screen">
+	<div class="navbar bg-primary text-primary-content mx-auto px-5">
+		<div class="flex-1">
+			<a href="/" class="btn btn-ghost text-xl uppercase">SvelteKit-Blog</a>
+		</div>
+		<div class="flex-none">
+			<ul class="menu menu-horizontal px-1">
+				<li><a class="bg-sky-500 hover:bg-white">Profile</a></li>
+				<li><a>Logout</a></li>
+			</ul>
+		</div>
 	</div>
-	<div class="flex-none">
-		<ul class="menu menu-horizontal px-1">
-			<li><a>Profile</a></li>
-			<li><a>Logout</a></li>
-		</ul>
-	</div>
+
+	<slot />
+
+	<footer class="footer footer-center p-4 bg-primary text-primary-content mt-auto">
+		<div>
+			<p>Copyright © 2023 - All rights reserved by Rajat Sharma</p>
+		</div>
+	</footer>
 </div>
-<slot />
