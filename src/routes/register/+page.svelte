@@ -1,6 +1,6 @@
 <div class="w-1/4 mx-auto p-8 bg-white rounded-lg shadow-md mt-5">
 	<h2 class="text-4xl text-[#4A55A2] font-bold mb-4 text-center uppercase">Register</h2>
-	<form method="POST">
+	<form action="?/registerUser" method="POST">
 		<div class="mb-4">
 			<input
 				type="text"
@@ -12,10 +12,10 @@
 		</div>
 		<div class="mb-4">
 			<input
-				type="email"
-				id="email"
-				name="email"
-				placeholder="Enter your email"
+				type="text"
+				id="username"
+				name="username"
+				placeholder="Enter your username"
 				class="form-input w-full p-3 rounded-lg"
 			/>
 		</div>
