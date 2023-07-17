@@ -4,6 +4,7 @@ import type { Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 
 export const customHandle: Handle = async ({ resolve, event }) => {
+	event.locals.auth = auth.handleRequest(event);
 	return resolve(event);
 };
 

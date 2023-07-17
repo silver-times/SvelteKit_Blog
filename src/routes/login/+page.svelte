@@ -1,6 +1,6 @@
 <div class="w-1/4 mx-auto p-8 bg-white rounded-lg shadow-md mt-5">
 	<h2 class="text-4xl text-[#4A55A2] font-bold mb-4 text-center uppercase">Login</h2>
-	<form action="?/loginUser" method="POST">
+	<form method="POST">
 		<div class="mb-4">
 			<input
 				type="text"
