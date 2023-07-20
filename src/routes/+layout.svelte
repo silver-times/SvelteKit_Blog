@@ -4,10 +4,8 @@
 
 	let user;
 	export let data: PageData;
-	$: console.log(data.user);
 </script>
 
-{!!user}
 <div class="flex flex-col min-h-screen">
 	<div class="navbar bg-[#4A55A2] text-primary-content mx-auto px-5">
 		<div class="flex-1 gap-1">

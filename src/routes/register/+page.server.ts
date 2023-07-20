@@ -3,10 +3,10 @@ import type { Actions } from '@sveltejs/kit';
 import { fail, redirect } from '@sveltejs/kit';
 import { auth } from '$lib/server/auth';
 
-// export const load: PageServerLoad = async ({ locals }) => {
-// 	const session = await locals.auth.validate();
-// 	if (session) throw redirect(302, '/');
-// };
+export const load: PageServerLoad = async ({ locals }) => {
+	const session = await locals.auth.validate();
+	if (session) throw redirect(302, '/');
+};
 
 export const actions: Actions = {
 	registerUser: async ({ request }) => {
