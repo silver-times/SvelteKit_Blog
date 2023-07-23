@@ -16,13 +16,13 @@
 			</a>
 		</div>
 
-		{#if user.name}
+		{#if user?.name}
 			<a href="/"><h2 class="text-xl hover:text-gray-200">Hello, {user.name}</h2></a>
 		{/if}
 
 		<div class="flex-none">
 			<ul class="flex gap-5 px-1">
-				{#if !user.name}
+				{#if !user?.name}
 					<li><a href="/register" class="text-md uppercase hover:text-gray-200">Register</a></li>
 					<li><a href="/login" class="text-md uppercase hover:text-gray-200">Login</a></li>
 				{:else}
