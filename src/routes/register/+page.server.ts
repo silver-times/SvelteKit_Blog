@@ -4,12 +4,13 @@ import { fail, redirect } from '@sveltejs/kit';
 import { auth } from '$lib/server/auth';
 
 export const load: PageServerLoad = async ({ locals }) => {
-	const session = await locals.auth.validate();
+	const { session } = await locals.auth.validateUser();
 	if (session) throw redirect(302, '/');
+	return {};
 };
 
 export const actions: Actions = {
-	registerUser: async ({ request }) => {
+	registerUser: async ({ request, locals }) => {
 		const { name, username, password } = Object.fromEntries(await request.formData()) as {
 			name: string;
 			username: string;
@@ -20,7 +21,7 @@ export const actions: Actions = {
 			return fail(400, { message: 'Invalid request' });
 		}
 		try {
-			await auth.createUser({
+			const user = await auth.createUser({
 				primaryKey: {
 					providerId: 'username',
 					providerUserId: username,
@@ -31,6 +32,8 @@ export const actions: Actions = {
 					username
 				}
 			});
+			const session = await auth.createSession(user.userId);
+			locals.auth.setSession(session);
 		} catch {
 			// username taken
 			console.log('Username taken');

@@ -2,7 +2,6 @@
 	import '../app.css';
 	import type { PageData } from './$types';
 
-	let user;
 	export let data: PageData;
 </script>
 

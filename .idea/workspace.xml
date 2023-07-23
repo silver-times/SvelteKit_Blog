@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="46a98923-90a3-4cf5-8184-2e5ee03dbec3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/server/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/server/auth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/logout/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/logout/+page.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/login/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/login/+page.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/register/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/register/+page.server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +71,8 @@
       <workItem from="1689331929850" duration="8835000" />
       <workItem from="1689707696496" duration="615000" />
       <workItem from="1689719289779" duration="3630000" />
-      <workItem from="1689770932184" duration="1230000" />
+      <workItem from="1689770932184" duration="1342000" />
+      <workItem from="1689849250524" duration="8585000" />
     </task>
     <servers />
   </component>
