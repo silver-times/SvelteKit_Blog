@@ -40,6 +40,6 @@ export const actions: Actions = {
 			return fail(400, { message: 'Username taken' });
 		}
 
-		throw redirect(302, '/login');
+		throw redirect(302, '/');
 	}
 };
