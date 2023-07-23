@@ -8,6 +8,7 @@ export const POST: RequestHandler = async ({ locals }) => {
 
 	await auth.invalidateSession(session.sessionId);
 	locals.auth.setSession(null);
+
 	console.log('Logged out');
 	throw redirect(302, '/');
 };
