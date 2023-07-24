@@ -27,11 +27,7 @@
 					<li><a href="/login" class="text-md uppercase hover:text-gray-200">Login</a></li>
 				{:else}
 					<li><a href="/profile" class="text-md uppercase hover:text-gray-200">Profile</a></li>
-					<button
-						type="submit"
-						formaction="https://www.google.com"
-						class="text-md uppercase hover:text-gray-200">Logout</button
-					>
+					<li><a href="/logout" class="text-md uppercase hover:text-gray-200">Logout</a></li>
 				{/if}
 			</ul>
 		</div>
