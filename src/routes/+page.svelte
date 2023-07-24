@@ -37,19 +37,21 @@
 					<div>
 						<p class="text-sm text-black uppercase font-extrabold">Created by: Rajat Sharma</p>
 					</div>
-					<div class="flex card-actions justify-end py-5">
-						<a href="/{article.id}"
-							><button
-								type="submit"
-								class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black">Edit</button
-							></a
-						>
-						<form action="?/deleteArticle&id={article.id}" method="POST" use:enhance>
-							<button class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black"
-								>Delete</button
+					{#if user}
+						<div class="flex card-actions justify-end py-5">
+							<a href="/{article.id}"
+								><button
+									type="submit"
+									class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black">Edit</button
+								></a
 							>
-						</form>
-					</div>
+							<form action="?/deleteArticle&id={article.id}" method="POST" use:enhance>
+								<button class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black"
+									>Delete</button
+								>
+							</form>
+						</div>
+					{/if}
 				</div>
 			</div>
 		{/each}
