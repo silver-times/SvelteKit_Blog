@@ -3,8 +3,10 @@
 	import { enhance } from '$app/forms';
 
 	export let data: PageData;
+	let articles;
+	let user;
 
-	$: ({ articles } = data);
+	$: ({ articles, user } = data);
 </script>
 
 <div class="flex justify-around mx-auto">
@@ -12,16 +14,18 @@
 	<div class="flex flex-col w-full px-5">
 		<div class="flex justify-between items-center">
 			<h2 class="text-3xl p-4 font-extralight text-black">ARTICLES</h2>
-			<div>
-				<button
-					type="submit"
-					class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black mr-2"
-					>All articles</button
-				>
-				<button type="submit" class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black"
-					>My Articles</button
-				>
-			</div>
+			{#if user}
+				<div>
+					<button
+						type="submit"
+						class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black mr-2"
+						>All articles</button
+					>
+					<button type="submit" class="btn bg-[#4A55A2] text-white hover:bg-white hover:text-black"
+						>My Articles</button
+					>
+				</div>
+			{/if}
 		</div>
 		{#each articles as article}
 			<div class="card w-full p-5 bg-[#A0BFE0] text-black mb-4">
@@ -52,31 +56,33 @@
 	</div>
 
 	<!-- Form -->
-	<div class="w-1/3 p-4">
-		<form action="?/createArticle" method="POST" class="w-full max-w-sm mx-auto" use:enhance>
-			<div>
-				<h2 class="text-3xl mb-4 font-extralight text-black">SUBMIT NEW ARTICLE</h2>
-				<input
-					class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-					placeholder="Article title"
-					type="text"
-					id="title"
-					name="title"
-				/>
-				<textarea
-					rows={10}
-					class="w-full px-3 py-2 my-5 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-					placeholder="Article content"
-					id="content"
-					name="content"
-				/>
-			</div>
-			<button
-				type="submit"
-				class="w-full py-4 rounded-md btn bg-[#4A55A2] text-white hover:bg-white hover:text-black"
-			>
-				Submit
-			</button>
-		</form>
-	</div>
+	{#if user}
+		<div class="w-1/3 p-4">
+			<form action="?/createArticle" method="POST" class="w-full max-w-sm mx-auto" use:enhance>
+				<div>
+					<h2 class="text-3xl mb-4 font-extralight text-black">SUBMIT NEW ARTICLE</h2>
+					<input
+						class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+						placeholder="Article title"
+						type="text"
+						id="title"
+						name="title"
+					/>
+					<textarea
+						rows={10}
+						class="w-full px-3 py-2 my-5 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+						placeholder="Article content"
+						id="content"
+						name="content"
+					/>
+				</div>
+				<button
+					type="submit"
+					class="w-full py-4 rounded-md btn bg-[#4A55A2] text-white hover:bg-white hover:text-black"
+				>
+					Submit
+				</button>
+			</form>
+		</div>
+	{/if}
 </div>

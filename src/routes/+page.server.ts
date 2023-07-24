@@ -3,9 +3,12 @@ import { prisma } from '$lib/server/prisma';
 import { fail } from '@sveltejs/kit';
 import type { PageServerLoad } from '../../.svelte-kit/types/src/routes/$types';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ locals }) => {
+	const { user } = await locals.auth.validateUser();
+
 	return {
-		articles: await prisma.article.findMany()
+		articles: await prisma.article.findMany(),
+		user
 	};
 };
 
